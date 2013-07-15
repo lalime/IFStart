@@ -1,0 +1,6 @@
+# list of all element to be ignored by git
+.classpath
+.project
+.settings/
+target/
+.*~
