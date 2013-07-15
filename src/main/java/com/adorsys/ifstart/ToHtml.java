@@ -27,19 +27,20 @@ public class ToHtml {
 	private Configuration config;
 	
 	
-	
-	
-	public ToHtml() {
-	config = new Configuration();
-	
+
+	public ToHtml(String tmplte, String dtemplate, String dest,
+			Map<?, ?> dmodel, Configuration config) {
+		super();
+		this.tmplte = tmplte;
+		this.dtemplate = dtemplate;
+		this.dest = dest;
+		this.dmodel = dmodel;
+		this.config = config;
+		config = new Configuration();
 	}
 
-	public ToHtml(String template, Map<?, ?> dmodel) {
-		super();
-		this.tmplte = template;
-		this.dmodel = dmodel;
-	}
-	
+
+
 	public String getTmplte() {
 		return tmplte;
 	}
