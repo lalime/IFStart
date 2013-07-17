@@ -18,13 +18,11 @@ import com.itextpdf.tool.xml.XMLWorkerHelper;
 public class HtmlToPdf  {
 	private String filetoconvert;
 	private String convertedFile;
-	private String title;
 	
-	public HtmlToPdf(String file_to_convert,  String convertedFile, String title) {
+	public HtmlToPdf(String file_to_convert,  String convertedFile) {
 		super();
 		this.filetoconvert = file_to_convert;
 		this.convertedFile = convertedFile;
-		this.title = title;
 		 
 	}
 	
@@ -115,7 +113,6 @@ public class HtmlToPdf  {
 		      document.addCreator("lionnel lalime");
 		      document.addSubject("Generating Pdf from Html");
 		      document.addCreationDate();
-		      document.addTitle(title);
 
 		      XMLWorkerHelper worker = XMLWorkerHelper.getInstance();
 

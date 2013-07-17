@@ -28,16 +28,16 @@ public class TemplateToHtmlTest {
 	@BeforeClass
 	public static void setUpBeforeClass() throws Exception {
 	     
-		System.out.println("This is a JUnit test ! \n We are in setUpBeforeClass() method");
+		//System.out.println("This is a JUnit test ! \n We are in setUpBeforeClass() method");
 	
 	}
 
 	@Test
 	public void test() {
-		System.out.println(" We are now entering in setUpBeforeClass() method");
+	
 		// data-model
 	      Map<String, Object> input = new HashMap<String, Object>();
-	      input.put("message", "vogella example");
+	      input.put("message", "Lalime");
 	      input.put("container", "test");
 
 	      // create list
@@ -54,7 +54,7 @@ public class TemplateToHtmlTest {
 	      ValueExampleObject exampleObject = new ValueExampleObject("Java object");
 	      input.put("exampleObject", exampleObject);
 	      
-	      setTth(new TemplateToHtml("ttemplate.ftl", "src/test/java/com/adorsys/ifstart", "/home/lalime/Bureau", input,"index.html"));
+	      setTth(new TemplateToHtml("ttemplate.ftl", "src/test/java/com/adorsys/ifstart",  input,"/home/lalime/Bureau/index.html"));
 	      try {
 			tth.generateHtml();
 		} catch (IOException e) {

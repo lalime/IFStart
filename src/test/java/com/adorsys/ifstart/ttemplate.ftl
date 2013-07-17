@@ -1,8 +1,10 @@
 
 <!--header.ftl-->
 <!DOCTYPE html>
-<title>FreeMarker hello world with a: ${message}</title>
-
+<html>
+<head>
+<title> Done by : ${message}</title>
+</head>
 <body> 
 <#if container??>
   <div ="${container}">
@@ -21,4 +23,5 @@
 </div>
 
 <!--footer.ftl-->
-</body> 
+</body>
+</html> 

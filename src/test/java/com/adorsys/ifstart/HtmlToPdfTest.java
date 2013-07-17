@@ -16,7 +16,7 @@ public class HtmlToPdfTest {
 	public void test() {
 	
 	
-	 HtmlToPdf htp = new HtmlToPdf("index.html", "converted.pdf","adorsys_ifstart html to pdf");
+	 HtmlToPdf htp = new HtmlToPdf("indx.html", "/home/lalime/Bureau/converted.pdf");
      htp.convertToPdf();
 		
 	
