@@ -16,7 +16,7 @@ public class HtmlToPdfTest {
 	public void test() {
 	
 	
-	 HtmlToPdf htp = new HtmlToPdf("indx.html", "/home/lalime/Bureau/converted.pdf");
+	 HtmlToPdf htp = new HtmlToPdf("indx.html", "converted.pdf");
      htp.convertToPdf();
 		
 	

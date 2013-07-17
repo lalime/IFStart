@@ -54,7 +54,7 @@ public class TemplateToHtmlTest {
 	      ValueExampleObject exampleObject = new ValueExampleObject("Java object");
 	      input.put("exampleObject", exampleObject);
 	      
-	      setTth(new TemplateToHtml("ttemplate.ftl", "src/test/java/com/adorsys/ifstart",  input,"/home/lalime/Bureau/index.html"));
+	      setTth(new TemplateToHtml("ttemplate.ftl", "src/test/java/com/adorsys/ifstart",  input,"index.html"));
 	      try {
 			tth.generateHtml();
 		} catch (IOException e) {

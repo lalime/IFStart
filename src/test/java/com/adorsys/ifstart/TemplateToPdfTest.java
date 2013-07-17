@@ -41,7 +41,7 @@ public class TemplateToPdfTest {
 
 	      ValueExampleObject exampleObject = new ValueExampleObject("Java object");
 	      input.put("exampleObject", exampleObject);
-		TemplateToPdf ttp = new TemplateToPdf("ttemplate.ftl", "src/test/java/com/adorsys/ifstart", input, "/home/lalime/Bureau/ifinal.pdf");	
+		TemplateToPdf ttp = new TemplateToPdf("ttemplate.ftl", "src/test/java/com/adorsys/ifstart", input, "ifinal.pdf");	
 		try {
 			ttp.fromHtmlToPdf();
 		} catch (IOException e) {
