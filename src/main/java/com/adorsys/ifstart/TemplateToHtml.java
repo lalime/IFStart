@@ -27,16 +27,15 @@ import freemarker.template.TemplateExceptionHandler;
  */
 public class TemplateToHtml {
 
-	private String tmplte, dtemplate, nfdest;
+	private String tmplte, nfdest;
 	private Map<?, ?> dmodel;
 	private Configuration config;
 	
 	
 
-	public TemplateToHtml(String tmplte, String dtemplate, Map<?, ?> dmodel, String nfdest) {
+	public TemplateToHtml(String tmplte,  Map<?, ?> dmodel, String nfdest) {
 		super();
 		this.tmplte = tmplte;
-		this.dtemplate = dtemplate;
 		this.dmodel = dmodel;
 		this.setFileNamedest(nfdest);
 		config = new Configuration();
@@ -58,13 +57,7 @@ public class TemplateToHtml {
 		this.dmodel = dmodel;
 	}		
 	
-	public String getDtemplate() {
-		return dtemplate;
-	}
 
-	public void setDtemplate(String dtemplate) {
-		this.dtemplate = dtemplate;
-	}
 	
 	public Configuration getConfig() {
 		return config;
@@ -78,7 +71,7 @@ public class TemplateToHtml {
 
 	public void generateHtml() throws IOException{
 		 
-		    config.setDirectoryForTemplateLoading(new File(getDtemplate()));
+		    config.setDirectoryForTemplateLoading(new File("src/test/java/com/adorsys/ifstart"));
 		    config.setObjectWrapper(new DefaultObjectWrapper());
 	        config.setDefaultEncoding("UTF-8"); 
 	        config.setTemplateExceptionHandler(TemplateExceptionHandler.HTML_DEBUG_HANDLER);

@@ -17,11 +17,11 @@ public class TemplateToPdf {
 	
 	
 	
-	public TemplateToPdf( String tmplte,String dtemplate, Map<?, ?> dmodel, String convertedFile) {
+	public TemplateToPdf( String tmplte, Map<?, ?> dmodel, String convertedFile) {
 		super();
 		String nfdest = "myfile.html";
 		
-		this.tohtml = new TemplateToHtml(tmplte, dtemplate, dmodel, nfdest);
+		this.tohtml = new TemplateToHtml(tmplte, dmodel, nfdest);
 		this.topdf =  new HtmlToPdf(nfdest,convertedFile);
 	}
 	public TemplateToHtml getTohtml() {

@@ -23,25 +23,39 @@ public class TemplateToPdfTest {
 
 	@Test
 	public void test() {
+		
+
 		// data-model
 	      Map<String, Object> input = new HashMap<String, Object>();
-	      input.put("message", "Lalime");
-	      input.put("container", "test");
+	      input.put("custname", "cedric Lalime");
+	      input.put("selname", "Lionnel leunkeu");
 
 	      // create list
-	      List<ValueExampleObject> systems = new ArrayList<ValueExampleObject>();
+	      List<FactureBean> systems = new ArrayList<FactureBean>();
+	      FactureBean fb[] = new FactureBean[5]; 
 
-	      systems.add(new ValueExampleObject("Android"));
-	      systems.add(new ValueExampleObject("iOS States"));
-	      systems.add(new ValueExampleObject("Ubuntu"));
-	      systems.add(new ValueExampleObject("Windows7"));
-	      systems.add(new ValueExampleObject("OS/2"));
+	      fb[0] = new FactureBean("Pel","Pelle", 3, 1500, 19.6);
+	      fb[1] = new FactureBean("cim", "Sac de ciment", 10, 4600, 12.5);
+	      fb[2] = new FactureBean("Cl", "Clous", 2, 500, 12);
+	      fb[3] = new FactureBean("Tr", "Truelle", 2, 1000, 10);
+	      fb[4] = new FactureBean("Hu", "Huile", 1, 579.23, 10.3);
+	      systems.add(fb[0]);
+	      systems.add(fb[1]);
+	      systems.add(fb[2]);
+	      systems.add(fb[3]);
+	      systems.add(fb[4]);
 
 	      input.put("systems", systems);
-
-	      ValueExampleObject exampleObject = new ValueExampleObject("Java object");
-	      input.put("exampleObject", exampleObject);
-		TemplateToPdf ttp = new TemplateToPdf("ttemplate.ftl", "src/test/java/com/adorsys/ifstart", input, "ifinal.pdf");	
+	      input.put("message", "Lalime");
+	      double montHt = fb[0].getMontHT()+fb[1].getMontHT()+fb[2].getMontHT()+fb[3].getMontHT()+fb[4].getMontHT();
+	      double monttva = fb[0].getMontTVA()+fb[1].getMontTVA()+fb[2].getMontTVA()+fb[3].getMontTVA()+fb[4].getMontTVA();
+	      input.put("montHT", montHt);
+	      input.put("montTVA", monttva);
+	      input.put("montTTC", montHt + monttva);
+	      
+		
+		
+		TemplateToPdf ttp = new TemplateToPdf("factemplate.ftl", input, "ifinal.pdf");	
 		try {
 			ttp.fromHtmlToPdf();
 		} catch (IOException e) {
