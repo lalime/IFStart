@@ -27,8 +27,8 @@ public class TemplateToPdfTest {
 
 		// data-model
 	      Map<String, Object> input = new HashMap<String, Object>();
-	      input.put("custname", "cedric Lalime");
-	      input.put("selname", "Lionnel leunkeu");
+	      input.put("custname", "Lalime");
+	      input.put("selname", "Nanium");
 
 	      // create list
 	      List<FactureBean> systems = new ArrayList<FactureBean>();

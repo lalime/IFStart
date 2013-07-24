@@ -2,13 +2,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title> Facture Modele - ${message}</title>
+<title> Invoice model - ${message}</title>
 </head>
 <body style=" margin: auto;"> 
 <table  style="background-color:#F5FFFA ; border-collapse: collapse; color:#808080; width:100%; height:50px " >
 <tr>
 <td width="25%"><img src="stbr.gif" alt="logo" width="100%"></img></td>
-<td valign="middle"><h1>Facture</h1></td>
+<td valign="middle"><h1>invoice</h1></td>
 </tr>
 </table>
 
@@ -22,19 +22,19 @@
 </#if>
 <table border="0" width="90%" style="color:#808080">
 <tr>
-<td  width="60%"><h2>PHARMACIE GABRIEL</h2></td>
-<td>Facture No : <strong> FAC-2915</strong></td>
+<td  width="60%"><h2>Company Name</h2></td>
+<td>Bill No : <strong> FAC-2915</strong></td>
 </tr>
 <tr>
-<td  width="60%"><strong>DR MOUAFO HILAIRE</strong></td>
+<td  width="60%"><strong>Other name </strong></td>
 <td></td>
 </tr>
 <tr>
-<td  width="60%"><strong>BP 8361 DOUALA</strong></td>
+<td  width="60%"><strong>Adress</strong></td>
 <td></td>
 </tr>
 <tr>
-<td width="60%"><strong>Tel: 33415232</strong></td>
+<td width="60%"><strong>Telephone number</strong></td>
 <td></td>
 </tr>
 <tr>
@@ -43,7 +43,7 @@
 </td>
 </tr>
 <tr>
-<td width="60%">Email : <strong>pharmgabriel@yahoo.fr</strong></td>
+<td width="60%">Email : <strong>emailadress@site.domain</strong></td>
 <td>Nom du Client : <strong>${custname}</strong></td>
 </tr>
 <tr>
